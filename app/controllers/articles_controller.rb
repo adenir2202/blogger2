@@ -30,8 +30,8 @@ class ArticlesController < ApplicationController
   		redirect_to article_path(@article.find(0))
 	end
 
-	def article_params
-    		params.require(:article).permit(:title, :body)
+  	def article_params
+    		params.require(:article).permit(:title, :body, :tag_list)
   	end
 
 	def edit
